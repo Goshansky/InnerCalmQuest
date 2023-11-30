@@ -131,18 +131,20 @@ body main, body aside{
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     body main, body aside {
         max-width: 100%;
         margin-right: 0;
     }
 
     .container {
-        margin-left: 10px;
+        margin: 0;
     }
 
     .cards-container {
         margin-right: 10px;
+        justify-content: center;
+        width: 100%;
     }
 
     .sort-buttons {
@@ -159,17 +161,54 @@ body main, body aside{
     .sidebar {
         width: 100%;
         max-width: none;
+    }
+
+    body main, body aside{
+        max-width: 100%;
+        /*margin: 0 10px;*/
+        margin-right: 0;
+        padding: 0;
+    }
+    aside{
+        position: static;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .cont {
+        display: flex;
+        flex-direction: column-reverse; /* Боковая панель перед main */
+    }
+
+    .sidebar {
+        max-width: 100%;
+        width: 100%;
+        position: static;
+        padding: 10px 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    body main {
+        max-width: 100%;
+        margin: 0;
+    }
+    .cart-container{
+        width: 100%;
+
     }
 }
 
 @media only screen and (max-width: 480px) {
     .container {
-        margin-left: 5px;
-        margin-right: 5px;
+        margin: 0;
     }
+
 
     .cards-container {
         margin-right: 5px;
+        justify-content: center;
+        width: 100%;
     }
 
     .sort-buttons {
@@ -183,8 +222,89 @@ body main, body aside{
         position: relative;
     }
 
+    body main, body aside{
+        max-width: 100%;
+        /*margin: 0 10px;*/
+        margin-right: 0;
+        padding: 0;
+    }
+    aside{
+        position: static;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .cont {
+        display: flex;
+        flex-direction: column-reverse; /* Боковая панель перед main */
+    }
+
     .sidebar {
+        max-width: 100%;
         width: 100%;
-        max-width: none;
+        position: static;
+        padding: 10px 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    body main {
+        max-width: 100%;
+        margin: 0;
+    }
+    .cart-container{
+        width: 100%;
+
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1400px) {
+
+    body main, body aside{
+        max-width: 100%;
+        /*margin: 0 10px;*/
+        margin-right: 0;
+        padding: 0;
+    }
+    aside{
+        position: static;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    main{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cont {
+        display: flex;
+        flex-direction: column-reverse; /* Боковая панель перед main */
+    }
+
+    .sidebar {
+        max-width: 100%;
+        width: 100%;
+        position: static;
+        padding: 10px 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    body main {
+        max-width: 100%;
+        margin: 0;
+    }
+    .cart-container{
+        width: 100%;
+
+    }
+    .container{
+        margin: 0;
+    }
+
+    .cards-container {
+        margin-right: 5px;
+        justify-content: center;
+        width: 100%;
     }
 }

@@ -22,7 +22,7 @@ main {
     flex-wrap: wrap;
 }
 
-.card {
+.card{
     width: 450px;
     height: auto;
     padding: 20px;
@@ -182,10 +182,20 @@ a.link-contents {
 a.link-contents:hover {
     text-decoration: underline;
 }
+#selected-meditation.card{
+
+    display: none;
+    margin-left: 40%;
+}
+
 
 @media only screen and (max-width: 768px) {
     main {
         padding: 10px;
+    }
+
+    #selected-meditation.card{
+        margin-left: 0;
     }
 
 
@@ -196,11 +206,28 @@ a.link-contents:hover {
     a.link-contents {
         margin-left: 0;
     }
+
+    #selected-meditation.card{
+
+        margin-left: 40%;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-top: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media only screen and (max-width: 480px) {
     fieldset {
         grid-template-columns: 1fr; /* Один столбец для мобильных экранов */
+    }
+    #selected-meditation.card{
+        margin-left: 0;
     }
 }
 

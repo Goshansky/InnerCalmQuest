@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta charset="UTF-8">
+    <title>Вход</title>
+    <link rel="stylesheet" href="../css/main/header.css">
+    <link rel="stylesheet" href="../css/main/footer.css">
+    <link rel="stylesheet" href="../css/feedback/styles_feedback.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <script
@@ -12,12 +14,9 @@
     ></script>
     <link rel="icon" href="../image/logo/logo.png">
     <title>InnerCalmQuest.com</title>
-    <link rel="stylesheet" href="../css/main/header.css">
-    <link rel="stylesheet" href="../css/main/footer.css">
-
-    <link rel="stylesheet" href="../css/Shop/style.css">
 </head>
 <body>
+
 <input type="checkbox" id="menu-toggle">
 <!---Шапка-->
 <header>
@@ -40,65 +39,71 @@
         </ul>
     </nav>
 </header>
-<div class="cont">
-<aside class="cart-container">
-    <aside class="sidebar">
-    <h2>Ваша корзина:</h2>
-    <ul id="cart" onclick="removeFromCart(event)"></ul>
-    <p>Итог: <span id="total">0.00</span>₽</p>
-    <button onclick="clearCart() " class="delete-all">Очистить корзину</button>
-    </aside>
-</aside>
 <main>
-<div class="container">
-    <h1>Наш магазинчик</h1>
-    <div class="sort-buttons">
-        <button onclick="sortItems('asc')">Сортировать по возрастанию цены</button>
-        <button onclick="sortItems('desc')">Сортировать по убыванию цены</button>
-        <button onclick="resetSort()">Сбросить сортировку</button>
+<h1>Оставьте отзыв</h1>
+<form action="#" id="contact_form" class="contact-form contact-grid">
+
+    <div class="form-field name">
+        <label class="label" for="fname">Полное Имя *</label>
+        <input id="fname" type="text" required>
     </div>
-    <div class="cards-container">
-        <div class="card" id="product1">
-            <h2>Гвозди</h2>
-            <img src="../image/Shop/1.png" alt="Product 1">
-            <p class="price">319.99₽</p>
-            <button onclick="addToCart('Гвозди', 319.99)">Добавить</button>
-        </div>
-        <div class="card" id="product2">
-            <h2>Чеснок</h2>
-            <img src="../image/Shop/2.png" alt="Product 2">
-            <p class="price">78.49₽</p>
-            <button onclick="addToCart('Чеснок', 78.49)">Добавить</button>
-        </div>
-        <div class="card" id="product3">
-            <h2>Острый перец</h2>
-            <img src="../image/Shop/3.png" alt="Product 3">
-            <p class="price">666.66₽</p>
-            <button onclick="addToCart('Острый перец', 666.66)">Добавить</button>
-        </div>
-        <div class="card" id="product4">
-            <h2>Столетнее яйцо</h2>
-            <img src="../image/Shop/4.jpg" alt="Product 4">
-            <p class="price">120.00₽</p>
-            <button onclick="addToCart('Cтолетнее яйцо', 120.00)">Добавить</button>
-        </div>
-        <div class="card" id="product5">
-            <h2>Подушка для медитации</h2>
-            <img src="../image/Shop/5.jpg" alt="Product 5">
-            <p class="price">343.49₽</p>
-            <button onclick="addToCart('Подушка для медитации', 343.49)">Добавить</button>
-        </div>
-        <div class="card" id="product6">
-            <h2>Свеча ароматическая</h2>
-            <img src="../image/Shop/6.png" alt="Product 6">
-            <p class="price">79.00₽</p>
-            <button onclick="addToCart('Свеча ароматическая', 79.00)">Добавить</button>
-        </div>
+
+    <div class="form-field email">
+        <label class="label" for="email">email *</label>
+        <input id="email" type="email" required>
     </div>
-</div>
-<script src="../js/Shop.js"></script>
+
+    <div class="form-field phone">
+        <label class="label" for="phone">телефон *</label>
+        <input id="phone" type="tel" required>
+    </div>
+
+    <div class="form-field subject">
+        <label class="label">Город *</label>
+        <select name="city" form="contact_form" required>
+            <option value="Moscow" selected>Moscow</option>
+            <option value="Kazan">Kazan</option>
+            <option value="Saratov">Saratov</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+
+    <div class="form-field comment-box">
+        <label class="label">Cообщение:</label>
+        <textarea name="comment-box" id="message" required></textarea>
+    </div>
+
+    <div class="submit-button">
+        <button id="submit-btn" class="btn" type="submit" value="submit" onclick="askForRegistration()">submit</button>
+    </div>
+
+</form>
+
+<script>
+    function askForRegistration() {
+        // Получаем значения полей
+        var fullName = document.getElementById('fname').value;
+        var email = document.getElementById('email').value;
+        var phone = document.getElementById('phone').value;
+        var city = document.getElementById('contact_form').elements['city'].value;
+        var message = document.getElementById('message').value;
+
+        // Проверяем, заполнены ли все обязательные поля
+        if (fullName && email && phone && city && message) {
+            // Отображаем всплывающее окно
+            alert('Форма отправлена!');
+
+            // Возвращаем false, чтобы предотвратить отправку формы (если форма отправляется на сервер)
+            return false;
+        } else {
+            // Если не все поля заполнены, можете предпринять другие действия или вернуть true для отправки формы
+            alert('Пожалуйста, заполните все обязательные поля.');
+            return false;
+        }
+    }
+</script>
 </main>
-</div>
+
 <footer class="footer">
     <div class="footer-container">
         <div class="about">
@@ -176,5 +181,6 @@
         </div>
     </div>
 </footer>
+
 </body>
 </html>

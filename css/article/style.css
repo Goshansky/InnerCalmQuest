@@ -2,11 +2,8 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 *{
-    font-family: 'Arial', sans-serif; /* Выберите подходящий шрифт */
+    font-family: 'Arial', sans-serif;
 }
-
-
-
 
 main {
     font-family: Arial, sans-serif;
@@ -28,7 +25,6 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     max-width: 1200px;
-
 }
 
 .article-image {
@@ -60,12 +56,12 @@ main {
     color: #fff;
     text-decoration: none;
     transition: background-color 0.3s ease-in-out;
-    font-size: 16px; /* Регулируйте размер шрифта кнопки */
-    font-family: 'Arial', sans-serif; /* Выберите подходящий шрифт */
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
     text-align: center;
     cursor: pointer;
     border: none;
-    border-radius: 5px; /* Радиус скругления углов кнопки */
+    border-radius: 5px;
 }
 
 .back-button:hover {
@@ -74,11 +70,11 @@ main {
 main p {
     font-size: 18px;
     text-align: justify;
-    line-height: 1.6; /* Регулировка межстрочного интервала */
+    line-height: 1.6;
 }
 main li{
     font-size: 18px;
-    line-height: 1.6; /* Регулировка межстрочного интервала */
+    line-height: 1.6;
 }
 
 
@@ -146,14 +142,10 @@ main li{
     .header-title{
         font-size: 18px;
     }
-
-
 }
 
 /* Медиа-запрос для планшетов */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
-
-
     .article-container {
         margin: 20px;
     }
