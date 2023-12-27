@@ -103,7 +103,11 @@
         flex-wrap: wrap; /* Элементы футера идут в строку на маленьких экранах */
     }
     .carousel .card{
-        height: 850px;
+        height: 1100px;
+    }
+    .card .img img{
+        width: 90%;
+        height: 90%;
     }
     #first img,
     #fourth img,
